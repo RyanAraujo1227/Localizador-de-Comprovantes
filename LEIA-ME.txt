@@ -1,0 +1,24 @@
+LOCALIZADOR DE COMPROVANTES — VERSÃO WEB 1.0
+
+SEM INSTALAÇÃO DE PYTHON
+1. Extraia o ZIP.
+2. Abra index.html no Google Chrome ou Microsoft Edge.
+3. É necessária conexão com a internet para carregar PDF.js, pdf-lib e JSZip de CDNs.
+4. Crie empresas, adicione vários PDFs e pesquise um código por linha.
+5. Confirme manualmente resultados aproximados ou duplicados.
+6. Baixe um PDF consolidado ou um ZIP com PDFs individuais.
+
+HOSPEDAGEM
+Publique os arquivos index.html, style.css e app.js em uma hospedagem de sites estáticos aprovada pela TI. O site é estático; não há backend de upload. Para uso corporativo, recomenda-se hospedar também as bibliotecas localmente, restringir o acesso e configurar uma política de segurança de conteúdo (CSP).
+
+LIMITAÇÕES IMPORTANTES
+- O leitor de PDF extrai texto digital. PDFs digitalizados/imagens exigem OCR, ainda não incluído.
+- A pesquisa aproximada por um dígito faltante em cada bloco depende de os blocos estarem representados no texto do PDF.
+- Códigos Pix não estão implementados.
+- Pesquisa textual em PDFs de bancos pode falhar se o texto vier em ordem inesperada. Confira sempre as páginas encontradas.
+- Arquivos e resultados ficam somente na memória da aba e são perdidos ao atualizar ou fechar.
+- Não faça upload de dados bancários para serviços externos sem aprovação da empresa.
+- Se o navegador bloquear importações de módulos ao abrir file://, use a extensão Live Server no VS Code para testes ou hospede como site estático.
+
+SEGURANÇA
+O código desta versão não faz upload dos PDFs; o processamento ocorre no navegador. As bibliotecas JavaScript são obtidas de CDNs de terceiros, portanto a aplicação depende da integridade delas e do ambiente do navegador. A versão corporativa deve empacotar as dependências localmente, aplicar CSP e ser revisada pela TI.
